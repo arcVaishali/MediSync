@@ -4,6 +4,7 @@ import {} from "antd";
 import { Link } from "react-router-dom";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input } from "antd";
+import Logo from "../../AppComponents/Logo";
 //import FormItem from "antd/es/form/FormItem";
 const LoginPage = () => {
   const onFinish = (values) => {
@@ -12,7 +13,15 @@ const LoginPage = () => {
   return (
     <>
       <div className="form-container">
-        <div className="logo-cover"></div>
+        <Logo
+         background="url('https://i.ibb.co/z8QTMnh/Logo.jpg')"
+         backgroundRepeat="no-repeat"
+         backgroundSize="contain"
+         backgroundPositionX="center"
+         height="168px"
+         width="170px"
+         borderRadius="85px"
+         />
         <Form
           name="normal_login"
           className="login-form"

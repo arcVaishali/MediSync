@@ -18,13 +18,3 @@
     background-color: #ffffff;
     border-radius: 20px;
 }
-
-.logo-cover{
-    background:url('https://i.ibb.co/z8QTMnh/Logo.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: center;
-    height: 168px;
-    width: 170px;
-    border-radius: 85px;
-}
