@@ -55,9 +55,9 @@ const LoginPage = () => {
               <Checkbox>Remember me</Checkbox>
             </Form.Item>
 
-            <a className="login-form-forgot" href="">
+            <Link to="/" className="login-form-forgot">
               Forgot password
-            </a>
+            </Link>
           </Form.Item>
 
           <Form.Item>
@@ -68,7 +68,7 @@ const LoginPage = () => {
             >
               Log in
             </Button>
-            Or <a href="">register now!</a>
+            Or <Link to="/signup">register now!</Link>
           </Form.Item>
         </Form>
       </div>
