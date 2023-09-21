@@ -14,14 +14,14 @@ const LoginPage = () => {
     <>
       <div className="form-container">
         <Logo
-         background="url('https://i.ibb.co/z8QTMnh/Logo.jpg')"
-         backgroundRepeat="no-repeat"
-         backgroundSize="contain"
-         backgroundPositionX="center"
-         height="168px"
-         width="170px"
-         borderRadius="85px"
-         />
+          background="url('https://i.ibb.co/z8QTMnh/Logo.jpg')"
+          backgroundRepeat="no-repeat"
+          backgroundSize="contain"
+          backgroundPositionX="center"
+          height="168px"
+          width="170px"
+          borderRadius="85px"
+        />
         <Form
           name="normal_login"
           className="login-form"
@@ -75,7 +75,7 @@ const LoginPage = () => {
               htmlType="submit"
               className="login-form-button"
             >
-              Log in
+              <Link to="/patient-dashboard">Log in</Link>
             </Button>
             Or <Link to="/signup">register now!</Link>
           </Form.Item>
