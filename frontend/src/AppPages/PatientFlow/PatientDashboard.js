@@ -1,8 +1,19 @@
 import React from 'react'
+import Sidebar from '../../AppComponents/Sidebar'
 
 const PatientDashboard = () => {
   return (
-    <div>PatientDashboard</div>
+    <>
+      <Sidebar
+      backgroundColor="white"
+      display="grid"
+      gridTemplateRows="1fr auto"
+      position="fixed"
+      padding="30px"
+      
+
+      />
+    </>
   )
 }
 

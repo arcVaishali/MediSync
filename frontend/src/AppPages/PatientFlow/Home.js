@@ -2,6 +2,8 @@ import React from "react";
 import { Button, Space } from "antd";
 import { Link } from "react-router-dom";
 import Logo from "../../AppComponents/Logo";
+import Title from "../../AppComponents/Title";
+import Subtitle from "../../AppComponents/Subtitle";
 import "./Styles/Homestyles.css";
 
 const Home = () => {
@@ -26,23 +28,17 @@ const Home = () => {
 
       <div className="box">
         <div className="column1">
-          <h1
+          <Title
+            color="white"
             className="title"
-            style={{
-              color: "white",
-            }}
-          >
-            MediSync  <br/>
-            Sync your health
-          </h1>
-          <h1
+            Text="MediSync, Sync your health"
+          />
+          <Subtitle
+            color="white"
             className="sub-title"
-            style={{
-              color: "white",
-            }}
-          >
-            LOREM IPSUM DOLOR SIT AMET
-          </h1>
+            text="LOREM IPSUM DOLOR SIT AMET"
+          />
+
           <div
             className="body"
             style={{
