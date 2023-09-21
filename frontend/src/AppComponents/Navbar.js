@@ -1,16 +1,17 @@
-import React from 'react'
-import "../AppPages/PatientFlow/Styles/Navbarstyles.css"
+import React from "react";
+import { Link } from "react-router-dom";
+import "../AppPages/PatientFlow/Styles/Navbarstyles.css";
 
 const Navbar = () => {
   return (
     <div className="nav-header">
-      <span>Home</span>
-      <span>About us</span>
-      <span>Report</span>
-      <span>Doctors</span>
-      <span>Contact us</span>
+      <Link className="link-name">Home</Link>
+      <Link className="link-name">About us</Link>
+      <Link className="link-name">Report</Link>
+      <Link className="link-name">Doctors</Link>
+      <Link className="link-name">Contact us</Link>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

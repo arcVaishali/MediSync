@@ -1,6 +1,7 @@
 import React from 'react'
 import Sidebar from '../../AppComponents/Sidebar'
 import Navbar from "../../AppComponents/Navbar"
+import PatientInfo from '../../AppComponents/PatientInfo'
 
 const PatientDashboard = () => {
   return (
@@ -15,8 +16,9 @@ const PatientDashboard = () => {
       height="100vh" 
       width="15vw"
       />
-      <Navbar
-      />
+      <Navbar/> 
+
+      <PatientInfo/>
     </>
   )
 }
