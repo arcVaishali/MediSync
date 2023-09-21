@@ -1,40 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import "../AppPages/PatientFlow/Styles/Infostyles.css";
 import { Button } from "antd";
+import EditIcon from "./EditIcon";
+import CloseIcon from "./CloseIcon";
+import Checkout from "./Checkout";
+import {Link} from "react-router-dom";
 
 const PatientInfo = () => {
-  const name = "Vaishali";
-  const dob = "14-03-2004";
-  const gender = "Female";
-  const phoneNumber = "8851463032";
-  const symptoms = ["cold", "fever", "back pain", "headache"];
-  const data1="data1";
-  const data2="data1";
-  const data3="data1";
+  // const [isSymptom , setIsSymptom] = useState(false);
+  // const foundSymptom=()=> {
+  //   setIsSymptom(true);
+  // }
+
+  // const styles={
+  //   display: isSymptom? "none" : "inline"
+  // }
+  const userData = {
+    name: "Vaishali",
+    dob: "14-03-2004",
+    gender: "Female",
+    phoneNumber: "8851463032",
+    symptoms: ["cold", "fever", "back pain", "headache"],
+    bloodGroup: "B+ve",
+    height: "157cm",
+    weight: "50kg",
+  };
+
+  const objectData = Object.entries(userData);
+  console.log(userData);
 
   return (
     <div className="info-container">
       <div className="row1">
-        <div className="field"> {`${name}`}</div>
-        <div className="field"> {`${dob}`}</div>
-        <div className="field"> {`${gender}`}</div>
-        <div className="field"> {`${data3}`}</div>
-        <div className="field">{`${data1}`}</div>
-        <div className="field"> {`${data2}`}</div>
+        {objectData.map(([key, value]) => (
+          <div
+            className="field"
+            style={{ display: value === userData.symptoms ? "none" : "flex" }}
+          >
+            {value != userData.symptoms ? `${value}` : ""} <EditIcon />
+          </div>
+        ))}
       </div>
       <div className="row2">
-        <div className="field"> Symptoms</div>
-        <div className="field"> Patient History</div>
+        <select className="field" id="symptoms" name="symptoms">
+          <option>Symptoms</option>
+          <option>fever</option>
+          <option>cold</option>
+          <option>back pain</option>
+        </select>
+        <div className="field">
+          {" "}
+          Patient History <Checkout />{" "}
+        </div>
       </div>
       <div className="row3">
-        {symptoms.map((key, element) => (
+        {userData.symptoms.map((key, element) => (
           <Button ghost type="text" key={key} className="tag">
-            {`${symptoms[element]}`}
+            <CloseIcon />
+            {`${userData.symptoms[element]}`}
           </Button>
         ))}
       </div>
       <div className="row3">
-        <Button type="primary" style={{marginRight:"10px"}}>Generate Live Patient Pass</Button>
+        <Button type="primary" style={{ marginRight: "10px" }}>
+          <Link to="/live-pass">Generate Live Patient Pass</Link>
+        </Button>
         <Button type="primary">Edit Profile Info</Button>
       </div>
     </div>
