@@ -8,6 +8,7 @@ const Logo = ({
   height,
   width,
   borderRadius,
+  marginLeft
 }) => {
   return (
     <div
@@ -19,6 +20,7 @@ const Logo = ({
         height,
         width,
         borderRadius,
+        marginLeft
       }}
     ></div>
   );
