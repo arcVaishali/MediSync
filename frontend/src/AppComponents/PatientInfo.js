@@ -1,29 +1,43 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../AppPages/PatientFlow/Styles/Infostyles.css";
 import { Button } from "antd";
 import EditIcon from "./EditIcon";
 import CloseIcon from "./CloseIcon";
 import Checkout from "./Checkout";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const PatientInfo = () => {
-  // const [isSymptom , setIsSymptom] = useState(false);
-  // const foundSymptom=()=> {
-  //   setIsSymptom(true);
-  // }
+  const [buttonStyles, setButtonStyles] = useState({
+    color: "white",
+    backgroundColor: "gray",
+    marginRight: "10px",
+  });
+  const [textStyles, setTextStyles] = useState({
+    color: "gray",
+  });
 
-  // const styles={
-  //   display: isSymptom? "none" : "inline"
-  // }
+  const buttonStylesChange = () => {
+    setButtonStyles({
+      color: "white",
+      backgroundColor: "blue",
+      marginRight: "10px",
+    });
+  };
+  const textStylesChange = () => {
+    setTextStyles({
+      color: "white",
+    });
+  };
+
   const userData = {
     name: "Vaishali",
-    dob: "14-03-2004",
-    gender: "Female",
-    phoneNumber: "8851463032",
-    symptoms: ["cold", "fever", "back pain", "headache"],
-    bloodGroup: "B+ve",
-    height: "157cm",
-    weight: "50kg",
+    dob: "Field empty",
+    gender: "Field empty",
+    phoneNumber: "Field empty",
+    symptoms: [],
+    bloodGroup: "Field empty",
+    height: "Field empty",
+    weight: "Field empty",
   };
 
   const objectData = Object.entries(userData);
@@ -35,21 +49,32 @@ const PatientInfo = () => {
         {objectData.map(([key, value]) => (
           <div
             className="field"
-            style={{ display: value === userData.symptoms ? "none" : "flex" }}
+            style={{
+              display: value === userData.symptoms ? "none" : "flex",
+              color:
+                value === "Field empty" || value.length === 0
+                  ? "gray"
+                  : "black",
+              content: value === null ? "Edit your profile" : `${value}`,
+            }}
           >
             {value != userData.symptoms ? `${value}` : ""} <EditIcon />
           </div>
         ))}
       </div>
       <div className="row2">
-        <select className="field" id="symptoms" name="symptoms">
+        <select
+          className="field"
+          id="symptoms"
+          name="symptoms"
+          style={textStyles}
+        >
           <option>Symptoms</option>
           <option>fever</option>
           <option>cold</option>
           <option>back pain</option>
         </select>
-        <div className="field">
-          {" "}
+        <div className="field" style={textStyles}>
           Patient History <Checkout />{" "}
         </div>
       </div>
@@ -62,10 +87,12 @@ const PatientInfo = () => {
         ))}
       </div>
       <div className="row3">
-        <Button type="primary" style={{ marginRight: "10px" }}>
+        <Button type="primary" style={buttonStyles}>
           <Link to="/live-pass">Generate Live Patient Pass</Link>
         </Button>
-        <Button type="primary">Edit Profile Info</Button>
+        <Button type="primary">
+          Edit Profile Info
+        </Button>
       </div>
     </div>
   );

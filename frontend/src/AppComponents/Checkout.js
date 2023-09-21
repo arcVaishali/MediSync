@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 
 const Checkout = () => {
-    const [isHovered, setIsHovered] = useState(false);
+    var [isHovered, setIsHovered] = useState(false);
 
   const transition1 = () => {
     setIsHovered(true);

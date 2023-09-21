@@ -5,13 +5,14 @@ import Signup from "./AppPages/PatientFlow/Signup";
 import Login from "./AppPages/PatientFlow/Login";
 import PatientDashboard from "./AppPages/PatientFlow/PatientDashboard";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PatientLivePass from "./AppPages/PatientFlow/PatientLivePass";
 // import { Footer } from "antd/es/layout/layout";
 // import Navbar from "./AppComponents/Navbar"
 
 function App() {
   return (
     <BrowserRouter>
-     {/* <div>
+      {/* <div>
       <Navbar/>
      </div> */}
       <Routes>
@@ -19,9 +20,10 @@ function App() {
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/patient-dashboard" element={<PatientDashboard />}></Route>
+        <Route path="/live-pass" element={<PatientLivePass />} exact></Route>
       </Routes>
       {/* <div> */}
-        {/* <Footer/> */}
+      {/* <Footer/> */}
       {/* </div> */}
     </BrowserRouter>
   );
