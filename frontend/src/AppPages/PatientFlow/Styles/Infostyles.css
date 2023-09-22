@@ -25,10 +25,9 @@
     grid-gap:2px;
     grid-template-columns: repeat(9, 1fr);
     margin:10px;
-}
-.row3{
     margin: 10px;
 }
+
 .field{
     display:flex;
     flex-direction: row;

@@ -37,7 +37,7 @@ const PatientInfo = () => {
   };
   const textStylesChange = () => {
     setTextStyles({
-      color: "white",
+      color: "black",
     });
   };
 
@@ -71,13 +71,10 @@ const PatientInfo = () => {
     // console.log(inputValue);
   };
 
-  // const [ saveButtonLabel , setSaveButtonLabel] = useState("Edit Profile Info");
-  // console.log(saveButtonLabel);
-
   const updateInfo = () => {
-    userData = objectData;
+    userData = inputValue;
     // POST this userData
-    // console.log(userData);
+    console.log(userData);
     setIsEditing({
       Name: false,
       DOB: false,
@@ -89,15 +86,15 @@ const PatientInfo = () => {
       Weight: false,
     });
     const showSaveButton = () => {
-      console.log(isEditing)
-  
+      // console.log(isEditing);
+
       const objd = Object.entries(isEditing);
-      console.log(objd);
+      // console.log(objd);
       for (let i = 0; i < objd.length; i++) {
         if (objd[i][1] == true) return true;
       }
       return false;
-    }; 
+    };
     showSaveButton();
   };
   const letEditingBegin = () => {
@@ -113,10 +110,10 @@ const PatientInfo = () => {
     });
   };
   const showSaveButton = () => {
-    console.log(isEditing)
+    // console.log(isEditing);
 
     const objd = Object.entries(isEditing);
-    console.log(objd);
+    // console.log(objd);
     for (let i = 0; i < objd.length; i++) {
       if (objd[i][1] == true) return true;
     }
@@ -124,6 +121,11 @@ const PatientInfo = () => {
   };
 
   // console.log(inputValue.Symptoms);
+  const [isClose, setIsClose] = useState(false);
+
+  const toggleSymptom = () => {
+    setIsClose(!isClose);
+  };
 
   return (
     <div className="info-container">
@@ -157,7 +159,7 @@ const PatientInfo = () => {
               style={{
                 fontFamily: "inherit",
                 fontSize: "inherit",
-                display: value === userData.Symptoms ? "none" : "flex",
+                display: value === inputValue.Symptoms ? "none" : "flex",
                 color:
                   value === "Field empty" || value.length === 0
                     ? "gray"
@@ -173,32 +175,54 @@ const PatientInfo = () => {
           id="Symptoms"
           name="Symptoms"
           style={textStyles}
+          onChange={(value) => inputValue.Symptoms.push(value.target.value)}
         >
-          <option>Symptoms</option>
-          <option>fever</option>
-          <option>cold</option>
-          <option>back pain</option>
+          <option value="Symptoms" selected>
+            Symptoms
+          </option>
+          <option value="fever">fever</option>
+          <option value="cold">cold</option>
+          <option value="back pain">back pain</option>
         </select>
         <div className="field" style={textStyles}>
-          Patient History <Checkout />{" "}
+          Patient History <Checkout />
         </div>
       </div>
       <div className="row3">
-        {userData.Symptoms.map((key, element) => (
-          <Button ghost type="text" key={key} className="tag">
+        {inputValue.Symptoms.map((key, element) => (
+          <Button
+            ghost
+            type="text"
+            key={key}
+            className="tag"
+            style={{
+              display: inputValue.Symptoms[element].isClose ? "none" : "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              borderRadius: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.781)",
+              padding: "1px",
+            }}
+            onClick={toggleSymptom}
+          >
+
             <CloseIcon />
-            {`${userData.Symptoms[element]}`}
-          </Button>
+            {`${inputValue.Symptoms[element]}`}
+          </Button> 
         ))}
       </div>
       <div className="row3">
         <Button type="primary" style={buttonStyles}>
           <Link to="/live-pass">Generate Live Patient Pass</Link>
         </Button>
-        { showSaveButton()  ? (
-          <Button type="primary" onClick={updateInfo}>Save</Button>
+        {showSaveButton() ? (
+          <Button type="primary" onClick={updateInfo}>
+            Save
+          </Button>
         ) : (
-          <Button type="primary">Edit Profile Info</Button>
+          <Button type="primary" onClick={letEditingBegin}>
+            Edit Profile Info
+          </Button>
         )}
       </div>
     </div>
