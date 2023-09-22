@@ -102,7 +102,7 @@ const PatientInfo = () => {
     const buttonStylesChange = () => {
       setButtonStyles({
         color: "white",
-        backgroundColor: "blue",
+        backgroundColor: "#1677ff",
         marginRight: "10px",
       });
     };
@@ -192,9 +192,10 @@ const PatientInfo = () => {
           <option value="Symptoms" selected>
             Symptoms
           </option>
-          <option value="fever">fever</option>
-          <option value="cold">cold</option>
-          <option value="back pain">back pain</option>
+          <option value="excessive sweating">excessive sweating</option>
+          <option value="chest pain">chest pain</option>
+          <option value="ankle swelling">ankle swelling</option>
+          <option value="shortness of breath">shortness of breath</option>
         </select>
         <div className="field" style={textStyles}>
           Patient History <Checkout />

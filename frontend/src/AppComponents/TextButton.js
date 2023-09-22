@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 const TextButton = ({
   position,
@@ -8,28 +9,27 @@ const TextButton = ({
   color,
   text,
 }) => {
+  const [isHovered , setIsHovered] = useState(false);
   const transition1 = () => {
-    const ele = document.getElementById("text-button");
-    ele.style.backgroundColor = "blue";
+    setIsHovered(true);
   };
   const transition2 = () => {
-    const ele = document.getElementById("text-button");
-    ele.style.backgroundColor = "#0955b5";
+    setIsHovered(false);
   };
 
   return (
     <div
       id="text-button"
       style={{
+        backgroundColor: isHovered?"#0955b5a8": backgroundColor,
         position,
         padding: "5px",
         margin,
-        backgroundColor,
         color,
         borderRadius: "5px",
       }}
-    //   onMouseEnter={transition1}
-    //   onMouseLeave={transition2}
+      onMouseEnter={transition1}
+      onMouseLeave={transition2}
     >
       {text}
     </div>

@@ -8,6 +8,7 @@
     padding:30px;
     width:65vw;
     border-radius:15px;
+    box-shadow: 0px 0px 4px 1px gray;
 } 
 
 .row1{
@@ -37,6 +38,7 @@
     padding:3px;
     margin: 5px;
     border-radius: 5px;
+    box-shadow: 4px 0px 11px 0px rgba(255, 255, 255, 0.507);
 } 
 
 .tag{
