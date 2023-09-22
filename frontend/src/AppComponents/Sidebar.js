@@ -15,45 +15,44 @@ const Sidebar = ({
   width,
 }) => {
   const arr = [
-    <div
-      style={{ margin: "0px 30px", display: "flex", flexDirection: "column" }}
-    >
-      <Button type="primary">Emergency</Button>,
-      <Button type="primary">Text</Button>,<Button type="primary">Text</Button>,
-      <Button type="primary">Logout</Button>,
-    </div>,
-    // <TextButton
-    //   backgroundColor="#0955b5"
-    //   color="white"
-    // //   padding="10px"
-    //   margin="5px"
-    //   text="Emergency"
-    //   key="emergency"
-    // />,
-    // <TextButton
-    //   backgroundColor="#0955b5"
-    //   color="white"
-    // //   padding="10px"
-    //   margin="5px"
-    //   text="Text"
-    //   key="text1"
-    // />,
-    // <TextButton
-    //   position="relative"
-    //   backgroundColor="#0955b5"
-    //   color="white"
-    // //   padding="10px"
-    //   margin="5px"
-    //   text="Text"
-    //   key="text2"
-    // />,
-    // <TextButton
-    //   backgroundColor="#0955b5"
-    //   color="white"
-    // //   padding="10px"
-    //   margin="5px"
-    //   text="Logout"
-    //   key="logout"
+    
+      // <Button type="primary">Emergency</Button>,
+      // <Button type="primary">Text</Button>,<Button type="primary">Text</Button>,
+      // <Button type="primary">Logout</Button>,
+    
+    <TextButton
+      backgroundColor="#0955b5"
+      color="white"
+    //   padding="10px"
+      margin="5px"
+      text="Emergency"
+      key="emergency"
+    />,
+    <TextButton
+      backgroundColor="#0955b5"
+      color="white"
+    //   padding="10px"
+      margin="5px"
+      text="Hospital Info"
+      key="text1"
+    />,
+    <TextButton
+      position="relative"
+      backgroundColor="#0955b5"
+      color="white"
+    //   padding="10px"
+      margin="5px"
+      text="Contact us"
+      key="text2"
+    />,
+    <TextButton
+      backgroundColor="#0955b5"
+      color="white"
+    //   padding="10px"
+      margin="5px"
+      text="Logout"
+      key="logout"
+      />
   ];
   return (
     <div
@@ -66,6 +65,7 @@ const Sidebar = ({
         color,
         padding,
         width,
+        boxShadow : "5px 0px 6px 0px gray"
       }}
     >
       <Logo

@@ -101,6 +101,7 @@ app.post("/signup",async (req,res)=>{
     password : passWord
   });
   await newUser.save();
+  console.log( newUser );
   res.status(200).json({code : 1,message : "success"});
 });
 
@@ -135,6 +136,7 @@ app.post("/patient-dashboard",async (req,res)=>{
     dbID : uid.rnd()
   });
   await newPatient.save();
+  console.log(newPatient);
   res.status(200).json({code : 1,message : "success"});
 });
 

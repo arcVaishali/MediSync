@@ -21,7 +21,7 @@ const PatientInfoBox = () => {
     dob: "14-03-2004",
     gender: "Female",
     phoneNumber: "8851463032",
-    symptoms: ["cold", "fever", "back pain", "headache"],
+    symptoms: ["chest pain"],
     bloodGroup: "B+ve",
     height: "157cm",
     weight: "50kg",
