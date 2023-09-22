@@ -5,6 +5,7 @@ import EditIcon from "./EditIcon";
 import CloseIcon from "./CloseIcon";
 import Checkout from "./Checkout";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const PatientInfo = () => {
   const [isEditing, setIsEditing] = useState({
@@ -42,7 +43,7 @@ const PatientInfo = () => {
   };
 
   let userData = {
-    Name: "Vaishali",
+    Name: "Field empty",
     DOB: "Field empty",
     Gender: "Field empty",
     Phone_Number: "Field empty",
@@ -71,10 +72,19 @@ const PatientInfo = () => {
     // console.log(inputValue);
   };
 
-  const updateInfo = () => {
+  const updateInfo = async () => {
     userData = inputValue;
     // POST this userData
     console.log(userData);
+    const url = "http://localhost:8080/patient-dashboard";
+    try {
+      const response = await axios.post(url, userData)
+      console.log("Response:", response.data);
+      alert(response.data.message + " Successfully saved");
+    } catch (error) {
+      // Handle any errors that occurred during the request
+      console.error("Error:", error);
+    }
     setIsEditing({
       Name: false,
       DOB: false,

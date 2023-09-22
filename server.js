@@ -50,12 +50,7 @@ const patientSchema = {
   phoneNumber: {
     type: String,
     required: true,
-    validate: {
-      validator: function (value) {
-        return phoneRegex.test(value);
-      },
-    }
-  },
+    },
   symptoms: {
     type: [String],
     required: true
@@ -129,14 +124,14 @@ app.post("/login",async (req,res)=>{
 app.post("/patient-dashboard",async (req,res)=>{
   const uid = new uniqueID({length : 10});
     const newPatient = new patientData({
-    name: req.body.name,
-    dob: req.body.dob,
-    gender: req.body.gender,
-    phoneNumber : req.body.phoneNumber,
-    symptoms: req.body.symptoms,
-    bloodGroup: req.body.bloodGroup,
-    height : req.body.height, 
-    weight : req.body.weight,
+    name: req.body.Name,
+    dob: req.body.DOB,
+    gender: req.body.Gender,
+    phoneNumber : req.body.Phone_Number,
+    symptoms: req.body.Symptoms,
+    bloodGroup: req.body.Blood_Group,
+    height : req.body.Height, 
+    weight : req.body.Weight,
     dbID : uid.rnd()
   });
   await newPatient.save();
