@@ -4,21 +4,26 @@
 
 Experience the convenience of modern healthcare management. Join thousands of satisfied patients who have made the switch to our Doctor Appointment Management System. Your health, your schedule, your way. 
 
+# Functionality 
+Our product has two portals-
+   - Doctor's portal
+   - Patient's portal
+
 # Our Team 
 - Frontend
-   + [Vaishali](https://www/github.com/arcVaishali/MediSync)
+   + [Vaishali](https://www/github.com/arcVaishali)
    + Avantika
-- Backend
-   + Shubham 
-   + Abhinay 
+- Backend and Database
+   + [Shubham](https://github.com/skyisnotmylimit)
+   + [Abhinay](https://github.com/abj-32)
 - Machine Learning
    + Ashish
    + Abhinay
-   + Vaishali
+   + [Vaishali](https://www/github.com/arcVaishali)
 - Design, Documentation, Presentation-
    + Aditi
    + Avantika
-   + Vaishali
+   + [Vaishali](https://www/github.com/arcVaishali)
 
 <!--
 ##### CHECKLIST- 
