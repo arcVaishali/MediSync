@@ -1,14 +1,33 @@
 import React from "react";
 import "./Styles/Signupstyles.css";
 import {} from "antd";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input } from "antd";
 import Logo from "../../AppComponents/Logo";
+import axios from "axios";
 //import FormItem from "antd/es/form/FormItem";
 const Signup = () => {
-  const onFinish = (values) => {
+  const navigate = useNavigate();
+  const onFinish = async (values) => {
     console.log("Received values of form: ", values);
+    const url = "http://localhost:8080/signup";
+    const sendData = {
+      username: values.username,
+      password: values.password,
+    };
+    try {
+      const response = await axios.post(url, sendData);
+      // Handle the response here
+      console.log("Response:", response.data);
+      // alert(response.data.message + "Now click on Already a member");
+      if (response.data.code) {
+        navigate("/login");
+      }
+    } catch (error) {
+      // Handle any errors that occurred during the request
+      console.error("Error:", error);
+    }
   };
   return (
     <>

@@ -4,6 +4,8 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const uniqueID = require("short-unique-id");
+
 const cors = require('cors');
 dotenv.config();
 const app = express();
@@ -69,11 +71,15 @@ const patientSchema = {
   weight: {
     type: String,
     required: true
+  },
+  dbID : {
+    type : String,
+    required : true
   }
 };
 
 //connecting to server
-mongoose.connect('mongodb://localhost:27017/MediSync').then(()=>{
+mongoose.connect('mongodb+srv://shubhamgupta9454666551:MediSync2023@cluster0.y2mqebh.mongodb.net/MediSync').then(()=>{
   console.log("mongo db connected");
 }).catch((error)=>{
   console.log("Error occured",error);
@@ -94,6 +100,7 @@ app.post("/signup",async (req,res)=>{
   console.log(req.body);
   const userName = req.body.username;
   const passWord = req.body.password;
+  const date = new Date();
   const newUser = new user({
     username : userName,
     password : passWord
@@ -119,7 +126,8 @@ app.post("/login",async (req,res)=>{
   }
 });
 
-app.post("/RegistrationForm",async (req,res)=>{
+app.post("/patient-dashboard",async (req,res)=>{
+  const uid = new uniqueID({length : 10});
     const newPatient = new patientData({
     name: req.body.name,
     dob: req.body.dob,
@@ -128,7 +136,8 @@ app.post("/RegistrationForm",async (req,res)=>{
     symptoms: req.body.symptoms,
     bloodGroup: req.body.bloodGroup,
     height : req.body.height, 
-    weight : req.body.weight
+    weight : req.body.weight,
+    dbID : uid.rnd()
   });
   await newPatient.save();
   res.status(200).json({code : 1,message : "success"});
