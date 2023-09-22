@@ -198,7 +198,7 @@ const PatientInfo = () => {
         { showSaveButton()  ? (
           <Button type="primary" onClick={updateInfo}>Save</Button>
         ) : (
-          <Button type="primary">Edit Profile Info</Button>
+          <Button type="primary" onClick={letEditingBegin}>Edit Profile Info</Button>
         )}
       </div>
     </div>
