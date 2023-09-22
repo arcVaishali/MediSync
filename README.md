@@ -1,14 +1,26 @@
 # MediSync
 
-1. Backend team and ML team make sure to follow these-
-    - abhi frontend wale part ko waise hi rehne dena
-    - backend ka ek alag folder bana ke code daalna
-    - abhi jo template daala hai woh frontend ka hi hai..backend ke liye folder banake ussme commit karna
-    - Plus har feature ke liye nayi branch banana...usme code push karna...phir PR merge apas mein discuss karke kar lena
-    - aur koshish karna har feature-cum-branch ke corresponding issue bhi generate karke khud ko assign kar lena, later on close bhi kardena jab ho jaye feature add
-    - aise baaki code and non-code har team members ko bhi idea rahega...kya ho gaya, kya karna hai...wagerah wagerah
+> A platform that would make a real difference in the healthcare management sector. With MediSync we aim to sync patient’s need with a robust healthcare management system powered by artificial intelligence.
 
+Experience the convenience of modern healthcare management. Join thousands of satisfied patients who have made the switch to our Doctor Appointment Management System. Your health, your schedule, your way. 
 
+# Our Team 
+- Frontend
+   + [Vaishali](https://www/github.com/arcVaishali/MediSync)
+   + Avantika
+- Backend
+   + Shubham 
+   + Abhinay 
+- Machine Learning
+   + Ashish
+   + Abhinay
+   + Vaishali
+- Design, Documentation, Presentation-
+   + Aditi
+   + Avantika
+   + Vaishali
+
+<!--
 ##### CHECKLIST- 
 - Frontend  
   + [ ] Patient Dashboard
@@ -19,3 +31,5 @@
 - Backend 
 
 - ML implementation
+
+  -->
