@@ -29,13 +29,7 @@ const PatientInfo = () => {
     color: "gray",
   });
 
-  const buttonStylesChange = () => {
-    setButtonStyles({
-      color: "white",
-      backgroundColor: "blue",
-      marginRight: "10px",
-    });
-  };
+  
   const textStylesChange = () => {
     setTextStyles({
       color: "black",
@@ -105,6 +99,14 @@ const PatientInfo = () => {
       }
       return false;
     };
+    const buttonStylesChange = () => {
+      setButtonStyles({
+        color: "white",
+        backgroundColor: "blue",
+        marginRight: "10px",
+      });
+    };
+    buttonStylesChange();
     showSaveButton();
   };
   const letEditingBegin = () => {
