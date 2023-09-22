@@ -36,7 +36,7 @@ const Home = () => {
           <Subtitle
             color="white"
             className="sub-title"
-            text="LOREM IPSUM DOLOR SIT AMET"
+            text="Welcome to the future of healthcare scheduling! "
           />
 
           <div
@@ -45,9 +45,10 @@ const Home = () => {
               color: "white",
             }}
           >
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Experience the convenience of modern healthcare management. Join
+            thousands of satisfied patients who have made the switch to our
+            Doctor Appointment Management System. Your health, your schedule,
+            your way.
           </div>
 
           <div className="buttons">
