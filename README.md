@@ -12,6 +12,7 @@ Our product has two portals-
 # Our Team 
 - Frontend
    + [Vaishali](https://www/github.com/arcVaishali)
+   + Aditi
    + Avantika
 - Backend and Database
    + [Shubham](https://github.com/skyisnotmylimit)
