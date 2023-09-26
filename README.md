@@ -12,7 +12,7 @@ Our product has two portals-
 # How to get started
 1. Fork the repo
 2. Clone the repo
-3. Run following commands to get frontend starting-
+3. Run following commands to get frontend started-
    ```
    cd frontend
    ```
