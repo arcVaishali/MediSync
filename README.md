@@ -13,14 +13,32 @@ Our product has two portals-
 1. Fork the repo
 2. Clone the repo
 3. Run following commands to get frontend starting-
-   ```cd frontend```
-   ```npm install```
-   ```npm start```
-4. Run the following commands to get the server running-
-   ```cd backend```
-   ```npm install```
-   ```npm start```
-5. Voila the website is up and functioning in you local dev environment.
+   ```
+   cd frontend
+   ```
+   
+   ```
+   npm install
+   ```
+   
+   ```
+   npm start
+   ```
+   
+5. Run the following commands to get the server running-
+   ```
+   cd backend
+   ```
+   
+   ```
+   npm install
+   ```
+   
+   ```
+   npm start
+   ```
+   
+7. Voila the website is up and functioning in you local dev environment.
 
 # Our Team 
 - Frontend
