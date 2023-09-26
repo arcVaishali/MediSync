@@ -38,7 +38,7 @@ Our product has two portals-
    npm start
    ```
    
-7. Voila the website is up and functioning in you local dev environment.
+7. Voila! the website is up and functioning on your local dev environment.
 
 # Our Team 
 - Frontend
