@@ -1,14 +1,63 @@
 # MediSync
 
-1. Backend team and ML team make sure to follow these-
-    - abhi frontend wale part ko waise hi rehne dena
-    - backend ka ek alag folder bana ke code daalna
-    - abhi jo template daala hai woh frontend ka hi hai..backend ke liye folder banake ussme commit karna
-    - Plus har feature ke liye nayi branch banana...usme code push karna...phir PR merge apas mein discuss karke kar lena
-    - aur koshish karna har feature-cum-branch ke corresponding issue bhi generate karke khud ko assign kar lena, later on close bhi kardena jab ho jaye feature add
-    - aise baaki code and non-code har team members ko bhi idea rahega...kya ho gaya, kya karna hai...wagerah wagerah
+> A platform that would make a real difference in the healthcare management sector. With MediSync we aim to sync patient’s needs with a robust healthcare management system powered by artificial intelligence.
 
+Experience the convenience of modern healthcare management. Join thousands of satisfied patients who have switched to our Doctor Appointment Management System. Your health, your schedule, your way. 
 
+# Functionality 
+Our product has two portals-
+   - Doctor's portal
+   - Patient's portal
+
+# How to get started
+1. Fork the repo
+2. Clone the repo
+3. Run following commands to get frontend started-
+   ```
+   cd frontend
+   ```
+   
+   ```
+   npm install
+   ```
+   
+   ```
+   npm start
+   ```
+   
+5. Run the following commands to get the server running-
+   ```
+   cd backend
+   ```
+   
+   ```
+   npm install
+   ```
+   
+   ```
+   npm start
+   ```
+   
+7. Voila! the website is up and functioning on your local dev environment.
+
+# Our Team 
+- Frontend
+   + [Vaishali](https://www/github.com/arcVaishali)
+   + Aditi
+   + Avantika
+- Backend and Database
+   + [Shubham](https://github.com/skyisnotmylimit)
+   + [Abhinay](https://github.com/abj-32)
+- Machine Learning
+   + Ashish
+   + Abhinay
+   + [Vaishali](https://www/github.com/arcVaishali)
+- Design, Documentation, Presentation-
+   + Aditi
+   + Avantika
+   + [Vaishali](https://www/github.com/arcVaishali)
+
+<!--
 ##### CHECKLIST- 
 - Frontend  
   + [ ] Patient Dashboard
@@ -19,3 +68,5 @@
 - Backend 
 
 - ML implementation
+
+  -->
